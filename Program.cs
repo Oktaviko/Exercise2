@@ -26,6 +26,17 @@ namespace Exercise2
                 else
                     Console.WriteLine("\nArray should have minimum 1 and maximum 20 element.\n");
             }
+            //accept array element
+            Console.WriteLine("");
+            Console.WriteLine("-----------------");
+            Console.WriteLine("Enter array element");
+            Console.WriteLine("-----------------");
+            for (i = 0; i < n; i++)
+            {
+                Console.WriteLine("<" + (i + 1) + ">");
+                string s1 = Console.ReadLine();
+                arr[i] = int.Parse(s1);
+            }
         }
         static void Main(string[] args)
         {
