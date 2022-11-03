@@ -38,6 +38,10 @@ namespace Exercise2
                 okta[i] = int.Parse(s1);
             }
         }
+        public void insertionsort()
+        {
+
+        }
         static void Main(string[] args)
         {
         }
