@@ -19,7 +19,7 @@ namespace Exercise2
             
                 while (true)
                 {
-                    Console.Write("enter the number of element in the array");
+                    Console.Write("enter the number of element in the array : ");
                     string s = Console.ReadLine();
                     n = Int32.Parse(s);
                     if ((n > 0) && (n < 86))
@@ -30,7 +30,7 @@ namespace Exercise2
                 //accept array element
                 Console.WriteLine("");
                 Console.WriteLine("-----------------");
-                Console.WriteLine("Enter array element");
+                Console.WriteLine("Enter array element : ");
                 Console.WriteLine("-----------------");
                 for (i = 0; i < n; i++)
                 {
@@ -50,7 +50,7 @@ namespace Exercise2
                 {
                     for (int OR = i + 1; OR > 0; OR--)
                     {
-                        if (okta[OR].CompareTo(okta[OR - 1]) < 0)
+                        if (okta[OR].CompareTo(okta[OR - 1]) < 1)
                         {
                             temp = okta[OR];
                             okta[OR] = okta[OR - 1];
@@ -58,8 +58,11 @@ namespace Exercise2
                         }
                     }
                 }
-            } while ((ch == 'y'));
+                Console.WriteLine("\nContinue search y/n :");
+                ch = char.Parse(Console.ReadLine().ToUpper());
+            } while (( ch == 'y'));
         }
+
         static void Main(string[] args)
         {
             Program myList = new Program();
