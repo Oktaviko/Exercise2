@@ -9,7 +9,7 @@ namespace Exercise2
     class Program
     {
         //array to be searched
-        int[] arr = new int[86];
+        int[] okta = new int[86];
         //number of element in the array
         int n;
         //get the number of element to store in the array
@@ -35,7 +35,7 @@ namespace Exercise2
             {
                 Console.WriteLine("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
-                arr[i] = int.Parse(s1);
+                okta[i] = int.Parse(s1);
             }
         }
         static void Main(string[] args)
