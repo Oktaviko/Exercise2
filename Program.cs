@@ -9,7 +9,7 @@ namespace Exercise2
     class Program
     {
         //array to be searched
-        int[] arr = new int[20];
+        int[] arr = new int[86];
         //number of element in the array
         int n;
         //get the number of element to store in the array
@@ -21,7 +21,7 @@ namespace Exercise2
                 Console.Write("enter the number of element in the array");
                 string s = Console.ReadLine();
                 n = Int32.Parse(s);
-                if ((n > 0) && (n < 20))
+                if ((n > 0) && (n < 86))
                     break;
                 else
                     Console.WriteLine("\nArray should have minimum 1 and maximum 20 element.\n");
