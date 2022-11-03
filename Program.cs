@@ -62,7 +62,26 @@ namespace Exercise2
                 ch = char.Parse(Console.ReadLine().ToUpper());
             } while (( ch == 'y'));
         }
-
+        public void mergesort(int low, int mid, int up)
+        {
+            char ch;
+            do
+            {
+                int h, i, OR, k;
+                if (low < mid)
+                {
+                    //partition list into two parts
+                    //one containing elements less that or equal to k
+                    h = low;
+                    i = mid;
+                    OR = mid + 1;
+                    k = up;
+                }
+                Console.WriteLine("\nContinue serach y/n : ");
+                ch = char.Parse((Console.ReadLine().ToUpper()));
+            } while ((ch == 'y'));
+           
+        }
         static void Main(string[] args)
         {
             Program myList = new Program();
@@ -90,6 +109,14 @@ namespace Exercise2
                             myList.insertionsort();
                             break;
                         case 2:
+                            Console.WriteLine("");
+                            Console.WriteLine("..........");
+                            Console.WriteLine("Mergesort");
+                            Console.WriteLine("..........");
+                            myList.input();
+                            myList.mergesort();
+                            break ;
+                        case 3:
                             Console.WriteLine("Exit");
                             break;
                     }
