@@ -43,13 +43,13 @@ namespace Exercise2
             string temp = null;
             for (int i = 1; i < okta.Length - 1; i++)
             {
-                for (int j = i + 1; j > 0; j--)
+                for (int OR = i + 1; OR > 0; OR--)
                 {
-                    if (okta[j].CompareTo(okta[j - 1]) < 0)
+                    if (okta[OR].CompareTo(okta[OR - 1]) < 0)
                     {
-                        temp = okta[j];
-                        okta[j] = okta[j - 1];
-                        okta[j - 1] = temp;
+                        temp = okta[OR];
+                        okta[OR] = okta[OR - 1];
+                        okta[OR - 1] = temp;
                     }
                 }
             }
