@@ -67,6 +67,10 @@ namespace Exercise2
             char ch;
             do
             {
+                //accept the number to be reached 
+                Console.Write("\nEnter the elements you want to search : ");
+                int item = Convert.ToInt32((Console.ReadLine()));
+
                 int h, i, OR, k;
                 if (low < mid)
                 {
@@ -127,7 +131,7 @@ namespace Exercise2
                 //to exit from the console
                 Console.WriteLine("\n\nPress return to exit.");
                 Console.ReadLine();
-            } while (pilihanmenu != 2);
+            } while (pilihanmenu != 3);
         }
     }
 }
