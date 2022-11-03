@@ -9,7 +9,7 @@ namespace Exercise2
     class Program
     {
         //array to be searched
-        int[] okta = new int[86];
+        string [] okta = new string[86];
         //number of element in the array
         int n;
         //get the number of element to store in the array
@@ -35,12 +35,24 @@ namespace Exercise2
             {
                 Console.WriteLine("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
-                okta[i] = int.Parse(s1);
+                okta[i] = Console.ReadLine();
             }
         }
         public void insertionsort()
         {
-
+            string temp = null;
+            for (int i = 1; i < okta.Length - 1; i++)
+            {
+                for (int j = i + 1; j > 0; j--)
+                {
+                    if (okta[j].CompareTo(okta[j - 1]) < 0)
+                    {
+                        temp = okta[j];
+                        okta[j] = okta[j - 1];
+                        okta[j - 1] = temp;
+                    }
+                }
+            }
         }
         static void Main(string[] args)
         {
