@@ -1,0 +1,3 @@
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise2\obj\Debug\Exercise2.csproj.AssemblyReference.cache
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise2\obj\Debug\Exercise2.csproj.SuggestedBindingRedirects.cache
+C:\Users\asus\OneDrive - Universitas Muhammadiyah Yogyakarta\AlgoritmaStrukturData\Exercise2\obj\Debug\Exercise2.csproj.CoreCompileInputs.cache

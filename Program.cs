@@ -16,46 +16,88 @@ namespace Exercise2
         int i;
         public void input()
         {
-            while(true)
-            {
-                Console.Write("enter the number of element in the array");
-                string s = Console.ReadLine();
-                n = Int32.Parse(s);
-                if ((n > 0) && (n < 86))
-                    break;
-                else
-                    Console.WriteLine("\nArray should have minimum 1 and maximum 20 element.\n");
-            }
-            //accept array element
-            Console.WriteLine("");
-            Console.WriteLine("-----------------");
-            Console.WriteLine("Enter array element");
-            Console.WriteLine("-----------------");
-            for (i = 0; i < n; i++)
-            {
-                Console.WriteLine("<" + (i + 1) + ">");
-                string s1 = Console.ReadLine();
-                okta[i] = Console.ReadLine();
-            }
-        }
+            
+                while (true)
+                {
+                    Console.Write("enter the number of element in the array");
+                    string s = Console.ReadLine();
+                    n = Int32.Parse(s);
+                    if ((n > 0) && (n < 86))
+                        break;
+                    else
+                        Console.WriteLine("\nArray should have minimum 1 and maximum 20 element.\n");
+                }
+                //accept array element
+                Console.WriteLine("");
+                Console.WriteLine("-----------------");
+                Console.WriteLine("Enter array element");
+                Console.WriteLine("-----------------");
+                for (i = 0; i < n; i++)
+                {
+                    Console.WriteLine("<" + (i + 1) + ">");
+                    string s1 = Console.ReadLine();
+                    okta[i] = Console.ReadLine();
+                }
+;        }
         public void insertionsort()
         {
-            string temp = null;
-            for (int i = 1; i < okta.Length - 1; i++)
+            char ch;
+            do
             {
-                for (int OR = i + 1; OR > 0; OR--)
+                //add variabel
+                string temp = null;
+                for (int i = 1; i < okta.Length - 1; i++)
                 {
-                    if (okta[OR].CompareTo(okta[OR - 1]) < 0)
+                    for (int OR = i + 1; OR > 0; OR--)
                     {
-                        temp = okta[OR];
-                        okta[OR] = okta[OR - 1];
-                        okta[OR - 1] = temp;
+                        if (okta[OR].CompareTo(okta[OR - 1]) < 0)
+                        {
+                            temp = okta[OR];
+                            okta[OR] = okta[OR - 1];
+                            okta[OR - 1] = temp;
+                        }
                     }
                 }
-            }
+            } while ((ch == 'y'));
         }
         static void Main(string[] args)
         {
+            Program myList = new Program();
+            int pilihanmenu;
+            char ch;
+            do
+            {
+                do
+                {
+                    Console.WriteLine("Menu option");
+                    Console.WriteLine("=============");
+                    Console.WriteLine("1. Insertionsort : ");
+                    Console.WriteLine("2. Mergesort :");
+                    Console.WriteLine("3. Exit ");
+                    Console.WriteLine("Enter your choice (1,2,3) : ");
+                    pilihanmenu = Convert.ToInt32(Console.ReadLine());
+                    switch (pilihanmenu)
+                    {
+                        case 1:
+                            Console.WriteLine("");
+                            Console.WriteLine("..........");
+                            Console.WriteLine("Insertionsort");
+                            Console.WriteLine("..........");
+                            myList.input();
+                            myList.insertionsort();
+                            break;
+                        case 2:
+                            Console.WriteLine("Exit");
+                            break;
+                    }
+                    Console.Write("\nPilih menu lagi? y/n :");
+                    ch = char.Parse(Console.ReadLine().ToLower());
+                    Console.Clear();
+                } while (ch == 'y');
+                //to exit from the console
+                Console.WriteLine("\n\nPress return to exit.");
+                Console.ReadLine();
+            } while (pilihanmenu != 2);
         }
     }
 }
