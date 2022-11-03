@@ -45,24 +45,27 @@ namespace Exercise2
             do
             {
                 //add variabel
-                string temp = null;
-                for (int i = 1; i < okta.Length - 1; i++)
+                string temp;
+                int OR = 0;
+                for (int i = 1; i <= n - 1; i++)
                 {
-                    for (int OR = i + 1; OR > 0; OR--)
+                    temp = okta[i];
+                    OR = i - 1;
+
+                    while ((OR >= 0) && (okta[OR].CompareTo(temp) > 0))
                     {
-                        if (okta[OR].CompareTo(okta[OR - 1]) < 1)
-                        {
-                            temp = okta[OR];
-                            okta[OR] = okta[OR - 1];
-                            okta[OR - 1] = temp;
-                        }
+                        okta[OR + 1] = okta[OR];
+
+                        OR--;
                     }
+                    okta[OR + 1] = temp;
+                    
                 }
                 Console.WriteLine("\nContinue search y/n :");
                 ch = char.Parse(Console.ReadLine().ToUpper());
             } while (( ch == 'y'));
         }
-        public void mergesort(int low, int mid, int up)
+        public void meregsort(int low, int mid, int up)
         {
             char ch;
             do
@@ -118,7 +121,7 @@ namespace Exercise2
                             Console.WriteLine("Mergesort");
                             Console.WriteLine("..........");
                             myList.input();
-                            myList.mergesort();
+                            
                             break ;
                         case 3:
                             Console.WriteLine("Exit");
